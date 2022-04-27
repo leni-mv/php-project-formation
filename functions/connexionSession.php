@@ -3,19 +3,26 @@
 //créer un booléen pour voir si connection réussie ou pas
 // Si à true > style visible
 $connexionReussie = false;
+$pseudo = 'Poppy';
+$pass = 'hhh';
+$error = false;
 
 function connexionSession() {
 
-  global $connexionReussie;
+  global $connexionReussie, $pseudo, $pass, $error;
 
-  if(isset($_POST['nom'])){
-    htmlentities($_POST['nom']);
-    $_SESSION += $_POST;
+  if(htmlentities(isset($_POST['nom'])) && htmlentities(isset($_POST['pass'])) ){
+    if ($_POST['nom'] == $pseudo && $_POST['pass'] == $pass) {
+      $error = false;
+      $_SESSION += $_POST;
+    } else {
+      $error = true;
+    }
   }
   
-  if(isset($_POST['pass'])){
-    htmlentities($_POST['pass']);
-  }
+  // if(isset($_POST['pass'])){
+  //   htmlentities($_POST['pass']);
+  // }
   
   if (!empty($_SESSION)){
     $connexionReussie = true;
@@ -36,7 +43,6 @@ function deconnexion() {
     $connexionReussi = false; 
   }
 }
-
-connexionSession();
 deconnexion();
+connexionSession();
 ?>

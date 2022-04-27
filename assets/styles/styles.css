@@ -10,7 +10,8 @@
   border-color: rgb(154, 56, 252);
 }
 
-div .connexionFormulaire {
-  background: #850dfd;
+.alert-primary {
   color: #850dfd;
+  background-color: #d0a5fc;
+  border-color: #7100e2;
 }

@@ -1,3 +1,4 @@
+<?php #session_start(); //Pour les tests?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +24,7 @@
 <body>
 
 <header>
+  <?php #print_r($_SESSION); // Pour les tests ?>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">

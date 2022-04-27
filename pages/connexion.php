@@ -1,5 +1,5 @@
 <?php 
-session_start();
+session_start(); # A décommenter quand test sur header fini
 // session_destroy();
 $titre = 'Se connecter';
 
@@ -7,20 +7,14 @@ include '../common/header.php';
 
 include '../functions/connexionSession.php';
 
-
 //include '../common/cookieConnexion.php';
 
-// Ajouter un password pour se connecter
-  //La vérification du password se fera avec la partie mysql
-// Faire l'affichage en js : assets/js/affichageProfil.js
-  //déconnexion style.css mettre en display none ou visibility none
-
-  print_r($_POST);
+  # print_r($_POST);
 ?>
 
 
 
-<div class="connexionFormulaire">
+<div class="">
 
   <form action="" method="post" class="container" 
   <?php 
@@ -29,6 +23,15 @@ include '../functions/connexionSession.php';
   } else {
     echo "style=\"display: block;\"";
   } ?>>
+
+  <?php 
+    if ($error) {
+      echo "<div class=\"alert alert-primary w-50\" role=\"alert\">
+            Le nom utilisateur ou le mot de passe est incorrecte.
+          </div>";
+    }
+  ?>
+
     <span class="input-group m-3 w-25">
       <span class="input-group-text">Pseudo : </span>
       <input type="text" class="form-control" name="nom" id="user">
@@ -60,7 +63,7 @@ include '../functions/connexionSession.php';
     echo "style=\"display: none;\"";
   } ?>>
     <span class="w-25">
-      <input class="btn btn-secondary " type="submit" name="deconnexion" value="Déconnexion" id="deconnexion">
+      <input class="btn btn-primary " type="submit" name="deconnexion" value="Déconnexion" id="deconnexion">
     </span>
   </form>
 
