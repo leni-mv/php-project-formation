@@ -1,0 +1,16 @@
+.btn-primary {
+  color: #fff;
+  background-color: #850dfd;
+  border-color: #850dfd;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: rgb(154, 56, 252);
+  border-color: rgb(154, 56, 252);
+}
+
+div .connexionFormulaire {
+  background: #850dfd;
+  color: #850dfd;
+}

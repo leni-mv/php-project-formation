@@ -1,0 +1,40 @@
+I'm working in php 8 on VisualStudioCode with Intelephense. And I use XAMP.
+
+Intelephense gets errors "Symbol 'x' is declared but not used.intelephense(1003)" when I use a variable in a function. Apart from one function I can use it normally
+
+For exemple $var is declared but not used and my script don't running :
+
+function testVar(){
+      $var = false;
+      if(true){
+        $var = true;
+      }
+    }
+
+An other exemple in my project : I can't use $connexionReussie (successConnexion) because it's declared but not use :
+
+$connexionReussie = false;
+
+function connexionSession() {
+
+  if(isset($_POST['nom'])){
+    htmlentities($_POST['nom']);
+    $_SESSION += $_POST;
+    $connexionReussie = true;
+  }
+  
+  if(isset($_POST['pass'])){
+    htmlentities($_POST['pass']);
+  }
+  
+  if (!empty($_SESSION)){
+    $nom = $_SESSION['nom'];
+    echo "Bonjour $nom !";
+  }
+}
+
+connexionSession();
+
+I imagine that it's the installation of php the problem or a badly parameterized setting but I don't know.
+
+I'm a novice so thanks in advance for your answers!
