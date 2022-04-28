@@ -1,4 +1,4 @@
-<footer>
+<footer class="mt-5 pt-5">
   <div class="card text-center bg-dark text-light">
     <div class="card-header">
       Mon Magasin

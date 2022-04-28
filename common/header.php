@@ -74,6 +74,14 @@
             " href="../pages/glaces.php">Nos glaces</a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link
+            <?php
+              if ($_SERVER['REQUEST_URI'] == __DIR__ . DIRECTORY_SEPARATOR . "pages" . DIRECTORY_SEPARATOR . "requeteAjax.php") echo 'active';
+            ?>
+            " href="../pages/requeteAjax.php">Votre Région</a>
+          </li>
+
           
           <span class="d-flex justify-end">
           <a class="nav-link
