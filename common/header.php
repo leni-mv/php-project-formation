@@ -77,9 +77,9 @@
           <li class="nav-item">
             <a class="nav-link
             <?php
-              if ($_SERVER['REQUEST_URI'] == __DIR__ . DIRECTORY_SEPARATOR . "pages" . DIRECTORY_SEPARATOR . "requeteAjax.php") echo 'active';
+              if ($_SERVER['REQUEST_URI'] == __DIR__ . DIRECTORY_SEPARATOR . "pages" . DIRECTORY_SEPARATOR . "trouveTaVille.php") echo 'active';
             ?>
-            " href="../pages/requeteAjax.php">Votre Région</a>
+            " href="../pages/trouveTaVille.php">Votre Région</a>
           </li>
 
           
